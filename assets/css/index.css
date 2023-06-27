@@ -1,3 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
+.hidden {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #18181b;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+#container #img {
+  width: 32rem;
+}
+#container #calculator {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  color: #f8fafc;
+  background-color: #262626;
+  border-radius: 0.8rem;
+}
+#container #calculator #form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+#container #calculator #form #title {
+  font-size: 2.25rem;
+  position: relative;
+}
+#container #calculator #form #title::after {
+  font-size: 2.25rem;
+  position: absolute;
+  content: "";
+  background-color: #7e57c2;
+  width: 8rem;
+  height: 0.3rem;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.3rem;
+}
+#container #calculator #form .input-box label {
+  font-size: 1.1rem;
+  color: #cdb5e1;
+  font-weight: 500;
+}
+#container #calculator #form .input-box .input-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3f3f46;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin-top: 0.3rem;
+}
+#container #calculator #form .input-box .input-field input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 1.3rem;
+  color: #f8fafc;
+  padding: 0 0.5rem;
+  outline: none;
+}
+#container #calculator #form .input-box .input-field input::-webkit-outer-spin-button, #container #calculator #form .input-box .input-field input::-webkit-inner-spin-button {
+  appearance: none;
+}
+#container #calculator #form .input-box .input-field span, #container #calculator #form .input-box .input-field i {
+  color: #cdb5e1;
+  font-size: 1.3rem;
+  padding: 0.6rem 1rem;
+}
+#container #calculator #form #calculate {
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #7e57c2;
+  color: #f8fafc;
+  padding: 0.5rem 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+#container #calculator #infos #result {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.75rem 0;
+}
+#container #calculator #infos #result #info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2039215686);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2039215686);
+}
+#container #calculator #infos #result #info #bmi {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.25rem;
+}
+#container #calculator #infos #result #info #bmi span:last-child {
+  font-size: 0.875rem;
+  color: #cdb5e1;
+}
+#container #calculator #infos #result #info #description {
+  width: 15.5rem;
+}
+#container #calculator #infos #result #more_info {
+  padding-top: 1.5rem;
+}
+#container #calculator #infos #result #more_info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7e57c2;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+#container #calculator #infos #result #more_info a:hover {
+  color: #f8fafc;
+}
 
 /*# sourceMappingURL=index.css.map */

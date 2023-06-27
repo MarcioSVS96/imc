@@ -1,0 +1,154 @@
+@use 'mixins';
+@use 'variables';
+
+body{
+    width: 100%;
+    height: 100vh;
+    @include mixins.flex-center;
+    background-color: variables.$background-color;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+
+    //IMAGEM
+    #img{
+    width: 32rem;
+    }
+
+    //CALCULADORA
+    #calculator{
+        @include mixins.column;
+        gap: 2rem;
+        padding: 2rem;
+        color: variables.$text-color;
+        background-color: variables.$calculator-color;
+        border-radius: .8rem;
+
+        #form{
+            @include mixins.column;
+            gap: 2rem;
+
+            #title{
+                font-size: 2.25rem;
+                position: relative;
+            }
+            #title::after{
+                font-size: 2.25rem;
+                position: absolute;
+                content: '';
+                background-color: variables.$underscore-color;
+                width: 8rem;
+                height: .3rem;
+                bottom: 0;
+                left: 0;
+                border-radius: .3rem;
+            }
+
+            .input-box{
+                label{
+                    font-size: 1.1rem;
+                    color: variables.$input-color;
+                    font-weight: 500;
+                }
+                .input-field{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: variables.$input-background-color;
+                    padding: .3rem;
+                    border-radius: .3rem;
+                    margin-top: .3rem;
+
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        width: 100%;
+                        font-size: 1.3rem;
+                        color: variables.$text-color;
+                        padding: 0 .5rem;
+                        outline: none;
+                    }
+                    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+                        appearance: none;
+                    }
+
+                    span, i{
+                        color: variables.$input-color;
+                        font-size: 1.3rem;
+                        padding: .6rem 1rem;
+                    }
+                }
+                
+            }
+
+            #calculate{
+                border: none;
+                font-size: 1.25rem;
+                font-weight: bold;
+                background-color: variables.$underscore-color;
+                color: variables.$text-color;
+                padding: .5rem 0;
+                border-radius: .3rem;
+                cursor: pointer;
+            }
+        }
+
+        #infos{
+            #result{
+                display: flex;              
+                align-items: center;
+                flex-direction: column;
+                padding: .75rem 0;
+                
+
+                #info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                    border-bottom: .1rem solid #ffffff34;
+                    border-top: .1rem solid #ffffff34;
+                    #bmi{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        font-size: 2.25rem;
+
+                    span:last-child{
+                        font-size: .875rem;
+                        color: variables.$input-color;
+                        }
+                    }
+
+                    #description{
+                        width: 15.5rem;
+                    }
+                }
+                
+
+                #more_info{
+                    padding-top: 1.5rem;
+                    
+                    a{
+                        @include mixins.flex-center;
+                        color: variables.$underscore-color;
+                        gap: .6rem;
+                        font-size: .875rem;
+                        text-decoration: none;
+                        transition:color .5s;
+                    }
+                    a:hover{
+                        color: variables.$text-color;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+
