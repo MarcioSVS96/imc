@@ -10,6 +10,14 @@
   display: none;
 }
 
+.normal {
+  color: #16a34a;
+}
+
+.attention {
+  color: #dc2626;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -113,13 +121,14 @@ body {
   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2039215686);
   border-top: 0.1rem solid rgba(255, 255, 255, 0.2039215686);
 }
-#container #calculator #infos #result #info #bmi {
+#container #calculator #infos #result #info #imc {
   display: flex;
   align-items: center;
   flex-direction: column;
   font-size: 2.25rem;
+  padding: 1rem;
 }
-#container #calculator #infos #result #info #bmi span:last-child {
+#container #calculator #infos #result #info #imc span:last-child {
   font-size: 0.875rem;
   color: #cdb5e1;
 }
