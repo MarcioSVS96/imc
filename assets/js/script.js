@@ -1,4 +1,4 @@
-const form = document.getElementById('form');
+const form = document.getElementById(form);
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -6,6 +6,7 @@ form.addEventListener('submit', function(event){
     const weight = document.getElementById('weight').value;
     const height = document.getElementById('height').value;
 
+    
     const imc = (weight / (height * height)).toFixed(2); //tofided (duas casas após a virgula)
 
     const value = document.getElementById('value');
